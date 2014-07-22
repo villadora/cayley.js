@@ -1,0 +1,29 @@
+{
+  "name": "cayley",
+  "version": "0.1.0",
+  "description": "nodejs client for cayley graph database",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/villadora/cayley.js.git"
+  },
+  "keywords": [
+    "cayley",
+    "client",
+    "database"
+  ],
+  "engines": { 
+    "node": ">=0.11.0"
+  },
+  "author": "villadora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/villadora/cayley.js/issues"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}
