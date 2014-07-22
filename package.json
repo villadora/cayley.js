@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "nodejs client for cayley graph database",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/villadora/cayley.js.git"
@@ -14,7 +13,7 @@
     "client",
     "database"
   ],
-  "engines": { 
+  "engines": {
     "node": ">=0.11.0"
   },
   "author": "villadora",
@@ -25,5 +24,8 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*"
+  },
+  "dependencies": {
+    "request": "^2.37.0"
   }
 }
