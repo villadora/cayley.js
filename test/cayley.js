@@ -26,7 +26,7 @@ describe('cayley', function() {
   });
 
   it('test Vertex', function(done) {
-    g.Vertex("Humphrey Bogart").All().then(function(err, result) {
+    g.Vertex("Humphrey Bogart").All(function(err, result) {
       assert.equal(result.length, 1);
       assert.equal(result[0].id, 'Humphrey Bogart');
       done(err);
@@ -56,6 +56,14 @@ describe('cayley', function() {
       done(err);
     });
   });
-  
+
+
+  it('test Emit', function(done) {
+    this.timeout(10000);
+    g.V("Casablanca").ForEach(function(d) { g.Emit(d); }, function(err, result) {
+      assert(result.length);
+      done(err);
+    });
+  });
 
 });

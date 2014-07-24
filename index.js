@@ -12,3 +12,6 @@ module.exports = function(host, options) {
   }
   return new Client(options);
 };
+
+
+module.exports.Client = Client;
