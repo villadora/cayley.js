@@ -13,7 +13,7 @@ $ npm install cayley --save
 You just need to copy the code of Gremlin!
 
 ```js
-var cayley = require('cayley);
+var cayley = require('cayley');
 
 var client = cayley("http://localhost:64210/");
 

@@ -1,6 +1,6 @@
 {
   "name": "cayley",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "nodejs client for cayley graph database",
   "main": "index.js",
   "scripts": {},
