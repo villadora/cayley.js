@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "0.10"
+  - "0.11"
+
+before_scripts:
+  - wget https://github.com/google/cayley/releases/download/v0.3.0/cayley_0.3.0_linux_386.tar.gz
+  - tar zxvf cayley_0.3.0_linux_386.tar.gz
