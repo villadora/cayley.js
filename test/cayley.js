@@ -66,4 +66,40 @@ describe('cayley', function() {
     });
   });
 
+  it('test type shape', function(done) {
+    this.timeout(10000);
+    var graph = g.type('shape');
+    graph.V("Casablanca").All(function(err, result) {
+      assert(!result.links && result.nodes);
+      done(err);
+    });
+  });
+
+  it('test write', function(done)  {
+    client.write([{
+      subject: "/zh/new_movie",
+      predicate: "name",
+      object: "New Movie"
+    }], function(err) {
+      if(err) return done(err);
+      g.V('New Movie').All(function(err, result) {
+        if(err) return done(err);
+        assert.equal(result.length, 1);
+        assert.equal(result[0].id, "New Movie");
+        client.delete([{
+          subject: "/zh/new_movie",
+          predicate: "name",
+          object: "New Movie"
+        }], function(err) {
+          if(err) return done(err);
+          g.V('New Movie').All(function(err, result) {
+            assert.equal(result.length, 1);
+            assert.equal(result[0].id, "");
+            done(err);
+          });
+        });
+      });
+    });
+  });
+
 });

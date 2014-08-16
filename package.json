@@ -1,6 +1,6 @@
 {
   "name": "cayley",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "nodejs client for cayley graph database",
   "main": "index.js",
   "scripts": {},
@@ -22,8 +22,9 @@
     "url": "https://github.com/villadora/cayley.js/issues"
   },
   "devDependencies": {
+    "chai": "*",
     "mocha": "*",
-    "chai": "*"
+    "q": "^1.0.1"
   },
   "dependencies": {
     "request": "^2.37.0"
